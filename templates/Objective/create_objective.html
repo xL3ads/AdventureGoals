@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Adventure Goals | Create your objective{% endblock %}
+
+{% block content %}
+    <div class="container-fluid mx-auto">
+        <div class="row">
+            <div class="col-md-8 offset-2 mx-auto">
+                <h3 class="mt-2">Create a new objective</h3>
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form }}
+                    <button type="submit" class="btn btn-outline-success mt-2">Create</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
